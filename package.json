@@ -1,18 +1,24 @@
 {
-  "name": "vanilla-typescript",
-  "version": "1.0.0",
-  "description": "JavaScript and TypeScript example starter project",
-  "main": "index.html",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "src/"
+  ],
   "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "start": "parcel serve src/index.html",
+    "build": "cross-env NODE_ENV=production parcel build src/index.html --public-url .",
+    "watch": "parcel watch src/index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
-  "dependencies": { "parcel-bundler": "^1.6.1" },
   "devDependencies": {
-    "typescript": "4.4.4"
-  },
-  "resolutions": {
-    "@babel/preset-env": "7.13.8"
-  },
-  "keywords": ["typescript", "javascript"]
+    "cross-env": "^5.2.0",
+    "gh-pages": "^5.0.0",
+    "parcel-bundler": "^1.8.1",
+    "typescript": "^2.9.2"
+  }
 }

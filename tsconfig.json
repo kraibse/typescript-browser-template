@@ -1,16 +1,29 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "module": "commonjs",
-    "jsx": "preserve",
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "allowJs": true,
-    "lib": [
-      "es6",
-      "dom"
-    ],
-    "rootDir": "src",
-    "moduleResolution": "node"
-  }
+  "module": "commonjs",
+  "moduleResolution": "node",
+  "newLine": "LF",
+  "outDir": "./lib/",
+  "target": "ES2021",
+  "forceConsistentCasingInFileNames": true,
+  "sourceMap": true,
+  "declaration": true,
+  "jsx": "preserve",
+  "lib": [
+    "es2017",
+    "dom"
+  ],
+  "strict": true,
+  "noUnusedLocals": true,
+  "noUnusedParameters": true,
+  "noImplicitReturns": true,
+  "noFallthroughCasesInSwitch": true
+},
+"include": [
+  "src/**/*"
+],
+"exclude": [
+  ".git",
+  "node_modules"
+],
 }
